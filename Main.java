@@ -49,6 +49,9 @@ class Main {
         if (leftIsRoman) {
             left = romanNumerals.get(leftStr);
             right = romanNumerals.get(rightStr);
+             if (left + right > 10) {
+                throw new IllegalArgumentException("Сумма римских чисел не должна быть больше 10");
+             }
         } else {
             left = Integer.parseInt(leftStr);
             right = Integer.parseInt(rightStr);
